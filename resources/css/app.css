@@ -1,0 +1,16 @@
+/* resources/css/app.css */
+
+/* Importa los estilos base de Tailwind */
+@tailwind base;
+/* Importa los componentes y utilidades de Tailwind */
+@tailwind utilities;
+
+@tailwind components;
+
+
+
+/* Aquí puedes agregar tus estilos personalizados */
+:root {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}

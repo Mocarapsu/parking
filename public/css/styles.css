@@ -1,0 +1,319 @@
+/* Base styles */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden; 
+    overflow-y:visible; 
+    font-family: 'Inter', sans-serif;
+}
+/* Fondo del encabezado */
+@keyframes moveBackground {
+    0% {
+        background-size: 18% 18%;
+        background-position: 0% 0%;
+    }
+    50% {
+        background-size: 18% 18%;
+        background-position: -100% -100%;
+    }
+    100% {
+        background-size: 18% 18%;
+        background-position: 0% 0%;
+    }
+}
+
+.header-background {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 6rem;
+    background: radial-gradient(circle at center, rgba(39, 102, 138, 1), rgba(6, 45, 73, 1));
+    background-size: 25% 25%; /* Mantén el tamaño del fondo */
+    animation: moveBackground 30.3s linear infinite; /* Animación constante */
+}
+@keyframes moveBackground {
+    0% {
+        background-size: 18% 18%;
+        background-position: 0% 0%;
+    }
+    50% {
+        background-size: 18% 18%;
+        background-position: -100% -100%;
+    }
+    100% {
+        background-size: 18% 18%;
+        background-position: 0% 0%;
+    }
+}
+.full-background {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 1rem;
+    background: radial-gradient(circle at center, rgba(39, 102, 138, 1), rgba(6, 45, 73, 1));
+    background-size: 25% 25%; /* Mantén el tamaño del fondo */
+    animation: moveBackground 30.3s linear infinite; /* Animación constante */
+}
+/* Imagen de fondo 
+.header-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido 
+}*/
+/* Títulos y descripciones */
+.header-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-description {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.8;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Barra de navegación */
+nav {
+    background: rgb(39, 102, 138);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1.5px;
+    padding: 0.5rem 1rem;   
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    font-weight: 200;
+    padding: 0.5rem 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+.nav-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: auto;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de las tarjetas */
+.benefit-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.benefit-card2 {
+    background-color: white;
+    padding: 7rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.benefit-card2:hover {
+    transform: translateY(-0.75rem);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.benefit-card img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.0rem;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover img {
+    transform: scale(1.1);
+}
+
+.benefit-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 1rem;
+}
+
+.benefit-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+/* Estilos de los modales */
+.modal-overlay {
+    display: grid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Estilos de botones y enlaces */
+.form-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #27668a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background: #1e4e6d;
+}
+
+.social-divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.social-divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: #e2e8f0;
+}
+
+.social-divider::before {
+    left: 0;
+}
+
+.social-divider::after {
+    right: 0;
+}
+
+.social-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-button {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+    background: #f7fafc;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+.login-link a {
+    color: #27668a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #718096;
+}
+
+.modal-close:hover {
+    color: hsl(218, 23%,  23%);
+}
+.hidden {
+    display: none !important;
+}
+.flex {
+    display: flex;
+}
