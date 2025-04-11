@@ -15,6 +15,7 @@ class CreateVehiclesTable extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id'); // Relación con la tabla users
             $table->string('name');  // Nombre del vehículo
             $table->string('color'); // Color del vehículo
             $table->string('license_plate')->unique(); // Placa del vehículo

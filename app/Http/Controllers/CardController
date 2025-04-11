@@ -1,0 +1,47 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Card;
+use Illuminate\Http\Request;
+
+class CardController extends Controller
+{
+    // Método para guardar una nueva tarjeta
+    public function store(Request $request)
+    {
+        // Validar los datos del formulario
+        $validated = $request->validate([
+            'number' => 'required|digits:16', // Número de tarjeta de 16 dígitos
+            'expiry' => 'required|regex:/^(0[1-9]|1[0-2]) \/ \d{4}$/', // Fecha en formato MM / YYYY
+            'cvc' => 'required|digits:3', // Código CVC de 3 dígitos
+        ]);
+
+        // Guardar los datos en la base de datos
+        $card = Card::create($validated);
+
+        // Retornar la tarjeta recién creada como respuesta JSON
+        return response()->json([
+            'message' => 'Tarjeta registrada exitosamente.',
+            'card' => $card,
+        ]);
+    }
+
+    // Método para obtener todas las tarjetas
+    public function index()
+    {
+        $cards = Card::all();
+        return response()->json($cards);
+    }
+
+    // Método para eliminar una tarjeta
+    public function destroy($id)
+    {
+        $card = Card::findOrFail($id);
+        $card->delete();
+
+        return response()->json([
+            'message' => 'Tarjeta eliminada exitosamente.',
+        ]);
+    }
+}

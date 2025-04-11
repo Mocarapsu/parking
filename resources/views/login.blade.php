@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet"> <!-- Asegúrate de que este archivo exista -->
+    <script src="{{ asset('js/app.js') }}" defer></script> <!-- Si tienes un archivo JS -->
+
 </head>
 <body>
 <!-- Modal de Inicio de Sesión -->
@@ -31,8 +34,9 @@
                 <a href="{{ url('recoverypassword') }}" class="text-blue-500 hover:underline">Recupérala aquí</a>
             </div>
 
-            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Iniciar Sesión</button>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition" href="{{ asset('parking') }}">Iniciar Sesión</button>
         </form>
+
 
         <div class="my-6 text-center text-gray-600">O ingresa con</div>
 

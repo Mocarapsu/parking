@@ -9,9 +9,11 @@ class Vehicle extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'color',
-        'license_plate',
-    ];
+    protected $fillable = ['user_id', 'name', 'color', 'license_plate'];
+
+    // Relación con el modelo User
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

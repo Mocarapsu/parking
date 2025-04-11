@@ -27,4 +27,10 @@ class VehicleController extends Controller
 
         return redirect()->route('parking')->with('success', 'Vehículo agregado correctamente.');
     }
+
+    public function index()
+    {
+        $vehicles = Vehicle::where('user_id', Auth::id())->paginate(10);
+        return view('vehicle', compact('vehicles'))->with('standalone', true);
+    }
 }

@@ -31,6 +31,6 @@ class RegisterController extends Controller
         ]);
 
         // Redirigir a la página de login después del registro
-        return redirect()->route('parking')->with('success', 'Account created successfully. Please log in.');
+        return redirect()->route('login')->with('success', 'Account created successfully. Please log in.');
     }
 }

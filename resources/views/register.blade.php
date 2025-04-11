@@ -80,5 +80,6 @@
     <title>Registro</title>
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 <script src="{{ asset('js/modal.js') }}"></script> <!-- Ensure this file exists in the public/js directory -->
+
 </body>
 </html>

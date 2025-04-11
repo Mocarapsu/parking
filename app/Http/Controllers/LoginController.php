@@ -58,4 +58,8 @@ class LoginController extends Controller
         // Redirigir al usuario a la página de inicio
         return redirect()->route('homepage')->with('success', 'Logged out successfully.');
     }
+    protected function redirectTo()
+{
+    return route('parking'); // Redirige a la página de estacionamiento
+}
 }
